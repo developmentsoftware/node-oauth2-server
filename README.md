@@ -5,6 +5,8 @@
 [![Test Status][travis-image]][travis-url]
 [![MIT Licensed][license-image]][license-url]
 [![oauthjs Slack][slack-image]][slack-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
+
 
 Complete, compliant and well tested module for implementing an OAuth2 server in [Node.js](https://nodejs.org).
 
@@ -65,4 +67,6 @@ npm test
 [license-url]: https://raw.githubusercontent.com/oauthjs/node-oauth2-server/master/LICENSE
 [slack-image]: https://img.shields.io/badge/slack-join-E01563.svg
 [slack-url]: https://oauthjs.slack.com
+[coveralls-image]: https://coveralls.io/repos/github/developmentsoftware/node-oauth2-server/badge.svg
+[coveralls-url]: https://coveralls.io/github/developmentsoftware/node-oauth2-server
 
