@@ -28,7 +28,9 @@
     "jshint": "2.9.4",
     "mocha": "3.3.0",
     "should": "11.2.1",
-    "sinon": "2.3.2"
+    "sinon": "2.3.2",
+    "istanbul": "^0.4.5",
+    "coveralls": "^2.13.1"
   },
   "license": "MIT",
   "engines": {
@@ -36,8 +38,9 @@
   },
   "scripts": {
     "pretest": "./node_modules/.bin/jshint --config ./.jshintrc lib test",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha 'test/**/*_test.js'",
-    "test-debug": "NODE_ENV=test ./node_modules/.bin/mocha  --inspect --debug-brk 'test/**/*_test.js'"
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha 'test/**/*_test.js'; istanbul cover _mocha $(find ./test -name \"*_test.js\" -not -path \"./node_modules/*\")",
+    "test-debug": "NODE_ENV=test ./node_modules/.bin/mocha  --inspect --debug-brk 'test/**/*_test.js'; istanbul cover _mocha $(find ./test -name \"*_test.js\" -not -path \"./node_modules/*\")",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
